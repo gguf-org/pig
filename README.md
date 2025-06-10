@@ -1,4 +1,4 @@
-## pig tool
+## pig tool for gguf
 [<img src="https://raw.githubusercontent.com/gguf-org/pig/master/pig.gif" width="128" height="128">](https://github.com/gguf-org/pig)
 
 install pig via pip/pip3:
