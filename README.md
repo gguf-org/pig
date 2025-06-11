@@ -1,12 +1,12 @@
 ## pig
 [<img src="https://raw.githubusercontent.com/gguf-org/pig/master/pig.gif" width="128" height="128">](https://github.com/gguf-org/pig)
 
-install it via pip/pip3:
+install pig via pip/pip3:
 ```
 pip install gguf-py
 ```
 
-update it (if previous version installed) by:
+update pig (if previous version installed) by:
 ```
 pip install gguf-py --upgrade
 ```
