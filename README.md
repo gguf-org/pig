@@ -1,15 +1,17 @@
+## python package for gguf
+
+install it via pip/pip3:
+```
+pip install gguf-py
+```
+
+update it (if previous version installed) by:
+```
+pip install gguf-py --upgrade
+```
+
 ## pig
 [<img src="https://raw.githubusercontent.com/gguf-org/pig/master/pig.gif" width="128" height="128">](https://github.com/gguf-org/pig)
-
-install pig via pip/pip3:
-```
-pip install pig-gguf
-```
-
-update pig (if previous version installed) by:
-```
-pip install pig-gguf --upgrade
-```
 
 check current version by:
 ```
@@ -20,6 +22,12 @@ check user manual by:
 ```
 pig -h
 ```
+
+### assembler
+```
+pig a
+```
+assemble a gguf by selecting a master file
 
 ### decomposer
 ```
