@@ -27,8 +27,32 @@ pig a
 ```
 assemble a gguf by selecting a master file
 
+### brush
+```
+pig b
+```
+brush/erase a selected tensor
+
+### checker
+```
+pig c
+```
+check tensor info for a selected gguf
+
 ### decomposer
 ```
 pig d
 ```
 decompose a selected gguf by tensor dimensions (dim)
+
+### extractor
+```
+pig e
+```
+extract a selected tensor
+
+### fixer
+```
+pig f
+```
+fix/rename a selected tensor
