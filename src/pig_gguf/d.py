@@ -3,6 +3,7 @@ from collections import defaultdict
 from gguf_connector.const import GGML_QUANT_VERSION, LlamaFileType
 from gguf_connector.reader import GGUFReader
 from gguf_connector.writer import GGUFWriter
+import os
 
 def get_arch_str(reader):
     field = reader.get_field("general.architecture")
@@ -37,22 +38,26 @@ def split_by_tensor_dimensions(input_path):
                 writer.write_tensors_to_file(progress=True)
                 writer.close()
 
-import os
-gguf_files = [file for file in os.listdir() if file.endswith('.gguf')]
+def list_gguf_files():
+    return [f for f in os.listdir() if f.endswith(".gguf")]
 
-if gguf_files:
-    print("GGUF file(s) available. Select which one to split:")
-    for index, file_name in enumerate(gguf_files, start=1):
-        print(f"{index}. {file_name}")
-    choice = input(f"Enter your choice (1 to {len(gguf_files)}): ")
-    try:
-        choice_index=int(choice)-1
-        selected_file=gguf_files[choice_index]
-        print(f"Model file: {selected_file} is selected!")
-        input_path=selected_file
-        split_by_tensor_dimensions(input_path)
-    except (ValueError, IndexError):
-        print("Invalid choice. Please enter a valid number.")
-else:
-    print("No GGUF files are available in the current directory.")
-    input("--- Press ENTER To Exit ---")
+def decompose_gguf():
+    gguf_files = list_gguf_files()
+    if gguf_files:
+        print("GGUF file(s) available. Select which one to split:")
+        for index, file_name in enumerate(gguf_files, start=1):
+            print(f"{index}. {file_name}")
+        choice = input(f"Enter your choice (1 to {len(gguf_files)}): ")
+        try:
+            choice_index=int(choice)-1
+            selected_file=gguf_files[choice_index]
+            print(f"Model file: {selected_file} is selected!")
+            input_path=selected_file
+            split_by_tensor_dimensions(input_path)
+        except (ValueError, IndexError):
+            print("Invalid choice. Please enter a valid number.")
+    else:
+        print("No GGUF files are available in the current directory.")
+        input("--- Press ENTER To Exit ---")
+
+decompose_gguf()
