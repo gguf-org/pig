@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "pigguf"
+version = "0.0.3"
+description = "gguf kit"
+authors = ["gguf <info@gguf.us>"]
+readme = "README.md"
+homepage = "https://gguf.org"
+repository = "https://github.com/gguf-org/pig"
+keywords = ["pig", "gguf"]
+classifiers = ["License :: OSI Approved :: MIT License"]
+
+[tool.poetry.dependencies]
+gguf-connector = ">=2.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+pig-d = "pigguf.d:main"
