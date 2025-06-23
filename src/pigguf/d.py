@@ -1,8 +1,8 @@
 
-from collections import defaultdict
 from gguf_connector.const import GGML_QUANT_VERSION, LlamaFileType
 from gguf_connector.reader import GGUFReader
 from gguf_connector.writer import GGUFWriter
+from collections import defaultdict
 import os
 
 def get_arch_str(reader):
