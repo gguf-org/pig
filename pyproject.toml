@@ -1,22 +1,18 @@
 [tool.poetry]
-name = "pigguf"
-version = "0.0.4"
-description = "gguf kit"
+name = "gguf-python"
+version = "0.0.2"
+description = "gguf"
 authors = ["gguf <info@gguf.us>"]
 readme = "README.md"
 homepage = "https://gguf.org"
-repository = "https://github.com/gguf-org/pig"
-keywords = ["gguf", "pig"]
 classifiers = ["License :: OSI Approved :: MIT License"]
 
 [tool.poetry.dependencies]
-gguf-connector = ">=2.0.1"
+gguf-connector = ">=2.0.2"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-pig-b = "pigguf.b:main"
-pig-d = "pigguf.d:main"
-pig-g = "pigguf.g:main"
+gguf-tensor-remover = "gguf_python.re:main"
