@@ -1,18 +1,20 @@
 [tool.poetry]
 name = "gguf-python"
-version = "0.0.2"
+version = "0.0.3"
 description = "gguf"
 authors = ["gguf <info@gguf.us>"]
 readme = "README.md"
 homepage = "https://gguf.org"
+keywords = ["gguf", "python", "connector"]
 classifiers = ["License :: OSI Approved :: MIT License"]
 
 [tool.poetry.dependencies]
-gguf-connector = ">=2.0.2"
+gguf-connector = ">=2.0.3"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-gguf-tensor-remover = "gguf_python.re:main"
+gguf-tensor-remover = "gguf_python.remover:main"
+gguf-tensor-renamer = "gguf_python.renamer:main"
