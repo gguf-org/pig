@@ -56,3 +56,9 @@ extract a selected tensor
 pig f
 ```
 fix/rename a selected tensor
+
+### group
+```
+pig g
+```
+group/component extractor
