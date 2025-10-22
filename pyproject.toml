@@ -9,7 +9,7 @@ keywords = ["gguf", "python", "connector"]
 classifiers = ["License :: OSI Approved :: MIT License"]
 
 [tool.poetry.dependencies]
-gguf-connector = ">=2.0.8"
+gguf-connector = ">=3.0.0"
 
 [build-system]
 requires = ["poetry-core"]
